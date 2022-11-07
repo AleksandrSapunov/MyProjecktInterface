@@ -1,7 +1,4 @@
-package alcohol.domesticMarket.factoryProduction;
-
-import alcohol.Printable;
-import alcohol.domesticMarket.OurProduction;
+package alcohol.ourMarket;
 
 public class OurFactoryAlcohol extends OurProduction {
 

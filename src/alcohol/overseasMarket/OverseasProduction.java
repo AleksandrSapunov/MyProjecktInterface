@@ -1,7 +1,7 @@
-package alcohol.externalMarket;
+package alcohol.overseasMarket;
 
 import alcohol.AlcoholSpecificity;
-import alcohol.Printable;
+import alcohol.interfaces.Printable;
 
 public class OverseasProduction extends AlcoholSpecificity implements Printable {
     int domesticPrice;

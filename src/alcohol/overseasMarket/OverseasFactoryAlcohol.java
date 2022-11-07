@@ -1,6 +1,4 @@
-package alcohol.externalMarket.factoryProduction;
-
-import alcohol.externalMarket.OverseasProduction;
+package alcohol.overseasMarket;
 
 public class OverseasFactoryAlcohol extends OverseasProduction {
     public OverseasFactoryAlcohol(String name, String colour, int price, boolean legal, int strengthAlcoholInPercent, int domesticPrice) {
