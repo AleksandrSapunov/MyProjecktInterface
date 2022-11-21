@@ -1,4 +1,4 @@
-package homeWork_08112022;
+package aleksanderSapunovHW.homeWork_08112022;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

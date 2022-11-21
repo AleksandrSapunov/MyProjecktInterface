@@ -1,4 +1,4 @@
-package homeWork_08112022;
+package aleksanderSapunovHW.homeWork_08112022;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -39,11 +39,11 @@ public class Main {
                 .distinct()               // убирает дубликаты
                 .sorted()                 // сортирует
                 .skip(3)               // пропускает
-                .toArray();               // собирает
+                .toArray();              // собирает
         System.out.println("arr1 " + Arrays.toString(arr1));
 
         System.out.println("Сумма всех елементов массива arrInt с помощью reduce со стартовым значением 6 =" +
-                Arrays.stream(arrInt).reduce(6,(acc,el)->acc +el));
+                Arrays.stream(arrInt).reduce(6, (acc, el) -> acc + el));
 
         System.out.println("Поиск максимального Элемента при помощи max =" +
                 Arrays.stream(arrInt).max().getAsInt());
@@ -54,19 +54,30 @@ public class Main {
         System.out.println("Поиск суммы всех элементов при помощи sum =" +
                 Arrays.stream(arrInt).sum());
 
-        List<Integer> ListForAllMath  = Arrays.asList(2,4,8,16,32);
+        List<Integer> ListForAllMath = Arrays.asList(2, 4, 8, 16, 32);
         boolean result = ListForAllMath.stream()
-                .peek(System.out::println)       //позволяет нам увидеть с какими мы элементами работаем
-                .allMatch(el ->el%2 ==0);
+                .peek(System.out::println)       //(подглядывать)позволяет нам увидеть с какими мы элементами работаем
+                .allMatch(el -> el % 2 == 0);
         System.out.println("Result from AllMath = " + result);
         //allMath - проверяет, что каждый элемент из этого списка подходит описанию (true)
         //anyMath - проверяет, что хотябы один элемент подходит описанному критерию
         //noneMath - проверяет, что не на одном елементе данное условие не будет выполнятся
 
         employeesList.stream()
-                .filter(el-> el.getAge()>26)
-                .filter(el -> el.getSex() =='m')
+                .filter(el -> el.getAge() > 26)
+                .filter(el -> el.getSex() == 'm')
                 .limit(3)
                 .forEach(System.out::println);
+
+        List<String> stringListHW = Stream.of("Linux", "Windows", "Mac").collect(Collectors.toList());
+        stringListHW.stream()
+                .reduce((a, b) -> a + b)
+                .get();
+
+        System.out.println("Объединение нескольких строк в одну " + stringListHW.stream().reduce((a, b) -> a + b).get());
+
+//        List<String> fruits = Stream.of("apple", "banana", "lemon", "orange").collect(Collectors.toList());
+//        fruits.fl
+//        fruits.stream().
     }
 }
